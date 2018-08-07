@@ -14,7 +14,7 @@ The beat reporters will go out and investigate the relationship you find, sourci
 
 ### Level 1: D3 Dabbler
 
-![4-scatter](Images/4-scatter.jpg)
+![4-scatter](images/4-scatter.jpg)
 
 You need to find a correlation between two data variables, each measured state by state and taken from different data sources. You'll then visualize the correlation with a scatter plot and embed the graphic into an .html file. You need to accomplish these four steps.
 
@@ -22,7 +22,7 @@ You need to find a correlation between two data variables, each measured state b
 
 Use the CSV file in the `data` directory.
 
-![2-census](Images/2-census.jpg)
+![2-census](images/2-census.jpg)
 
 If you're craving an extra challenge, look for demographic information using the 2014 one-year estimates from the U.S. Census Bureau's American Community Survey. You can specify your information using the [American FactFinder](http://factfinder.census.gov/faces/nav/jsf/pages/searchresults.xhtml) tool. When searching through the data, be sure to select these options in the left sidebar:
 
@@ -34,18 +34,18 @@ When you select those filters, use the search bar to chose the demographic of yo
 
 Next, you'll search for data on health risks using 2014 survey data from the [Behavioral Risk Factor Surveillance System](https://chronicdata.cdc.gov/Behavioral-Risk-Factors/BRFSS-2014-Overall/5ra3-ixqq). Note that we already filtered the data by year and break-out—you just need to find the behavioral risk you want to use. Filter the `Question` data on the site before downloading a specified .csv, or simply download the whole .csv file and use Excel's filtering tools.
 
-![3-brfss](Images/3-brfss.jpg)
+![3-brfss](images/3-brfss.jpg)
 
 
 #### 2. Format and Test the Data (Optional)
 
 Let's format your data for D3. With your two data types chosen, grab the value columns from each and paste them into a new Excel document. Create header names that you can easily call with JavaScript (concise, lowercased, camelCased). Make sure that your rows and columns line up—You may need to delete Guam from your datasheet so that your Census and BRFSS data matches.
 
-![6-excel](Images/6-excel.jpg)
+![6-excel](images/6-excel.jpg)
 
 To make sure you have a solid trend, you need to test for correlation with Excel's `=CORREL()` function. Aim for a value either less than -0.5 or more than 0.5—these values would indicate a moderate correlation and a story that might be worth pursuing (shoot for -0.75 or 0.75 if you're feeling super diligent).
 
-![5-correl](Images/5-correl.jpg)
+![5-correl](images/5-correl.jpg)
 
 * If you don't find a value that matches, try at least four other demographic-risk combinations—if you can't find one that hits -0.5 or .5, just go with the most striking mix.
 
@@ -77,7 +77,7 @@ When your `d3.html` displays the graphic just as you'd like it to, embed it in `
 
 Why make a static graphic when D3 lets you interact with your data?
 
-![7-animated-scatter](Images/7-animated-scatter.gif)
+![7-animated-scatter](images/7-animated-scatter.gif)
 
 #### 1. More Data, More Dynamics
 
@@ -91,7 +91,7 @@ You're going to include more demographics and more risk factors. Place additiona
 
 While the ticks on the axes allow us to infer approximate values for each circle, it's impossible to determine the true value without adding another layer of data. Enter tooltips: developers can implement these in their D3 graphics to reveal a specific element's data when the user hovers their cursor over the element. Add tooltips to your circles and display each tooltip with the data that the user has selected. Use the `d3-tip.js` plugin developed by [Justin Palmer](https://github.com/Caged)—we've already included this plugin in your assignment directory.
 
-![8-tooltip](Images/8-tooltip.gif)
+![8-tooltip](images/8-tooltip.gif)
 
 * Check out [David Gotz's example](https://bl.ocks.org/davegotz/bd54b56723c154d25eedde6504d30ad7) to see how you should implement tooltips with d3-tip.
 
@@ -99,7 +99,7 @@ While the ticks on the axes allow us to infer approximate values for each circle
 
 ### Level 3: Mobile Moxie (Tough, but Rewarding)
 
-![9-responsive-d3.gif](Images/9-responsive-d3.gif)
+![9-responsive-d3.gif](images/9-responsive-d3.gif)
 
 Sure, there's plenty of desktop readers out there, but what about tablet and phone users? How would you optimize your scatter plot so that its data is accessible to all users? This will be one of the toughest tasks when making most D3 graphics—but taking it on will also help you stand out as a thorough data visualizer.
 
